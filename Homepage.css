@@ -1,0 +1,273 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f1eb 0%, #ede4d3 100%);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: F9CB99;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.493);
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-image {
+            width: 80px;
+            height: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 850px) {
+        .nav-links {
+            display: none;  /* hide links */
+            flex-direction: column;
+            background: linear-gradient(135deg, #f5f1eb 0%, #ede4d3 100%);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.493);
+            position: absolute;
+            top: 50px;
+            right: 30px;
+            width: 200px;
+            padding: 10px;
+            border-radius: 8px;
+            z-index: 1000; /* ensure it appears above other content */
+        }
+
+        .nav-links.active {
+            display: flex; /* show menu when active */
+        }
+
+        .hamburger {
+            display: block; /* show hamburger */
+        }
+    }
+       .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            color: #3498db;
+        }
+
+        .lost-item-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .found-item-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .notification-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .message-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .about-us-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .faq-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .profile-icon {
+            width: 15px;
+            height: auto;
+        }
+
+        .sign-in-btn {
+            background: #95a5a6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .profile-btn {
+            padding: 10px 10px;
+            border: 3px solid #555454;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .sign-in-btn:hover {
+            background: #7f8c8d;
+            transform: translateY(-1px);
+        }
+
+        .profile-btn:hover {
+            background: #080808;
+            transform: translateY(-1px);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #bdc3c7;
+        }
+
+        .recently-lost-item-icon {
+            width: 32px;
+            height: auto;
+        }
+
+        .recently-found-item-icon {
+            width: 32px;
+            height: auto;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .item-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .item-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .item-image-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .lost-item {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .found-item {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .view_more {
+            position: absolute;
+            top: 10px;
+            right: 3px;
+            width: 15%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .zoom-icon:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .item-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .item-description {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .item-details {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .item-detail {
+            display: flex;
+            font-size: 14px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #2c3e50;
+            min-width: 100px;
+        }
+
+        .detail-value {
+            color: #7f8c8d;
+            margin-left: 20px;
+        }
