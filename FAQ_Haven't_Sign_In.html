@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunTrack - FAQ_Haven't_Sign_In</title> <!-- Set Website Title -->
+    <link rel="stylesheet" href="FAQ.css"> <!-- Link to CSS file -->
+    </head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="BacktoHomepage()"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\SunTrack_Logo.png" class="logo-image" alt="rectangle" /></div>
+            <script>
+                function BacktoHomepage() {
+                    window.location.href= "index.html"; // Redirect to Homepage page after successful sign up 
+                } 
+            </script>
+
+        <div class="hamburger" onclick="toggleMenu()"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Hamburger Icon.png" class="lost-item-icon" alt="rectangle" /></div>
+            <script>
+                function toggleMenu() {
+                    document.getElementById("nav-links").classList.toggle("active");
+                }
+            </script>
+            
+        <div class="nav-links" id="nav-links">
+            <a href="Lost_Items_Haven't_Sign_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Lost Item Icon.png" class="lost-item-icon" alt="rectangle" /> <!-- Lost Item Icon -->
+                <span class="nav-text">Lost Items</span> <!-- Lost Items Link -->
+            </a>
+            <a href="Found_Item_Haven't_Sign_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Found Item Icon.png" class="found-item-icon" alt="rectangle" /> <!-- Found Item Icon -->
+                <span class="nav-text">Found Items</span> <!-- Found Items Link -->
+            </a>
+            <a href="#" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Notificaiton Icon.png" class="notification-icon" alt="rectangle" /> <!-- Notification Icon -->
+                <span class="nav-text" onclick="Error_Message();">Notification</span> <!-- Notification Link -->
+                <script>
+                    function Error_Message() {
+                        alert('Please sign in to access Notification.');
+                }
+                </script>
+            </a>
+            <a href="#" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Message Icon.png" class="message-icon" alt="rectangle" /> <!-- Message Icon -->
+                <span class="nav-text" onclick="Message();">Messages</span> <!-- Messages Link -->
+                <script>
+                    function Message() {
+                        alert('Please sign in to access Messages.');
+                    }
+                </script>
+            </a>
+            
+            <a href="About_Us_Haven't_Sign_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\About Us Icon.png" class="about-us-icon" alt="rectangle" /> <!-- About Us Icon -->
+                <span class="nav-text">About Us</span> <!-- About Us Link -->
+            </a>
+            <a href="FAQ_Haven't_Sign_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\FAQ Icon.png" class="faq-icon" alt="rectangle" /> <!-- FAQ Icon -->
+                <span class="nav-text">FAQ</span> <!-- FAQ Link -->
+            </a>
+            <button type="button" class="sign-in-btn" onclick="SignIn();">Sign In</button> <!-- Sign In Button -->
+                <script>
+                    function SignIn() {
+                        window.location.href= "Sign_In.html"; // Redirect to Sign In page after successful sign up 
+                } 
+                </script>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="section">
+            <div class="section-header">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\FAQ Icon.png" class="FAQ-icon" alt="rectangle" /> <!-- Recently Lost Item Icon -->
+                <h2 class="section-title">Recently Lost</h2> <!-- Recently Lost Section Title -->
+            </div>
+        </div>
+
+        <div class="search-container">
+            <div class="search-icon"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Search Icon.png" class="search-icon" alt="rectangle"></div>
+            <input type="text" class="search-bar" placeholder="Search for found items">
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-info">
+                    <h4>1.How do I report a lost item?</h4>
+                    <p>You can report lost item by using the upload function in the 'Lost Items' page.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-info">
+                    <h4>2. How do I report a found item?</h4>
+                    <p>You can report found item by using the upload function in the 'Found Items' page.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-info">
+                    <h4>3. How do I manage my account settings?</h4>
+                    <p>You can manage your account settings by clicking on your profile picture in the upper right corner.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-info">
+                    <h4>4. How can I contact the finder of my lost item or the owner of a found item?</h4>
+                    <p>If you find an item displayed on the page that you or someone else has lost, you can expand the item and a "Send a Message" 
+                    button will appear. You can use this button to contact the person who found the item or the owner.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-info">
+                    <h4>5. What should I do if I forgot my password?</h4>
+                    <p>If you forget your password and cannot log in, you can click 'Forgot Password ?' to reset your password.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
