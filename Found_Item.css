@@ -322,7 +322,7 @@
             margin-left: 20px;
         }
 
-        .popout-icon {
+        .foundpopout-icon {
             width: 15px;
             height: auto;
         }
@@ -600,4 +600,5 @@
         .foundmessage-modal-btn-cancel:hover {
             background: #f5f1eb;
             transform: translateY(-2px);
+
         }
