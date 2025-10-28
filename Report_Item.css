@@ -1,0 +1,299 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f1eb 0%, #ede4d3 100%);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: F9CB99;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.493);
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-image {
+            width: 80px;
+            height: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 850px) {
+        .nav-links {
+            display: none;  /* hide links */
+            flex-direction: column;
+            background: linear-gradient(135deg, #f5f1eb 0%, #ede4d3 100%);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.493);
+            position: absolute;
+            top: 50px;
+            right: 30px;
+            width: 200px;
+            padding: 10px;
+            border-radius: 8px;
+            z-index: 1000; /* ensure it appears above other content */
+        }
+
+        .nav-links.active {
+            display: flex; /* show menu when active */
+        }
+
+        .hamburger {
+            display: block; /* show hamburger */
+        }
+    }
+       .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            color: #3498db;
+        }
+
+        .lost-item-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .found-item-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .notification-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .message-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .about-us-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .faq-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .profile-icon {
+            width: 15px;
+            height: auto;
+        }
+    
+        .profile-btn {
+            padding: 10px 10px;
+            border: 3px solid #555454;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .profile-btn:hover {
+            background: #080808;
+            transform: translateY(-1px);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .form-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px 15px;
+            border: 2px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.95);
+            outline: none;
+            transition: border-color 0.3s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .form-input:focus {
+            border-color: #3498db;
+        }
+
+        .form-input::placeholder {
+            color: #95a5a6;
+        }
+
+        .form-textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px 15px;
+            border: 2px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.95);
+            outline: none;
+            transition: border-color 0.3s ease;
+            resize: vertical;
+            min-height: 80px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .form-textarea:focus {
+            border-color: #3498db;
+        }
+
+        .form-textarea::placeholder {
+            color: #95a5a6;
+        }
+
+        .datetime-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .datetime-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.95);
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .datetime-input:focus {
+            border-color: #3498db;
+        }
+
+        .datetime-input::placeholder {
+            color: #95a5a6;
+        }
+
+        .upload-area {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid #bdc3c7;
+            border-radius: 10px;
+            padding: 60px 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .upload-area:hover {
+            border-color: #3498db;
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        .upload-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .upload-subtitle {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-submit {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background: #34495e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(44, 62, 80, 0.3);
+        }
+
+        .btn-cancel {
+            background: transparent;
+            color: #2c3e50;
+            border: 2px solid #2c3e50;
+        }
+
+        .btn-cancel:hover {
+            background: #f8f9fa;
+        }

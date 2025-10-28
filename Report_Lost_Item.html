@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunTrack - Report_Lost_Item</title> <!-- Set Website Title -->
+    <link rel="stylesheet" href="Report_Item.css"> <!-- Link to CSS file -->
+    </head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="BacktoHomepage()"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\SunTrack_Logo.png" class="logo-image" alt="rectangle" /></div>
+            <script>
+                function BacktoHomepage() {
+                    window.location.href= "Homepage_Signed_In.html"; // Redirect to Homepage page after successful sign up 
+                } 
+            </script>
+
+        <div class="hamburger" onclick="toggleMenu()"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Hamburger Icon.png" class="lost-item-icon" alt="rectangle" /></div>
+            <script>
+                function toggleMenu() {
+                    document.getElementById("nav-links").classList.toggle("active");
+                }
+            </script>
+            
+        <div class="nav-links" id="nav-links">
+            <a href="Lost_Item_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Lost Item Icon.png" class="lost-item-icon" alt="rectangle" /> <!-- Lost Item Icon -->
+                <span class="nav-text">Lost Items</span> <!-- Lost Items Link -->
+            </a>
+
+            <a href="Found_Item_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Found Item Icon.png" class="found-item-icon" alt="rectangle" /> <!-- Found Item Icon -->
+                <span class="nav-text">Found Items</span> <!-- Found Items Link -->
+            </a>
+
+            <a href="Notification.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Notificaiton Icon.png" class="notification-icon" alt="rectangle" /> <!-- Notification Icon -->
+                <span class="nav-text">Notification</span> <!-- Notification Link -->
+            </a>
+
+            <a href="Message.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Message Icon.png" class="message-icon" alt="rectangle" /> <!-- Message Icon -->
+                <span class="nav-text">Messages</span> <!-- Messages Link -->
+            </a>
+            
+            <a href="About_Us_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\About Us Icon.png" class="about-us-icon" alt="rectangle" /> <!-- About Us Icon -->
+                <span class="nav-text">About Us</span> <!-- About Us Link -->
+            </a>
+            
+            <a href="FAQ_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\FAQ Icon.png" class="faq-icon" alt="rectangle" /> <!-- FAQ Icon -->
+                <span class="nav-text">FAQ</span> <!-- FAQ Link -->
+            </a>
+            <button type="button" class="profile-btn" onclick="Profile();"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Username Icon.png" class="profile-icon" alt="rectangle"></button> <!-- Sign In Button -->
+                <script>
+                    function Profile() {
+                        window.location.href= "User_Profile.html"; // Redirect to Sign In page after successful sign up 
+                } 
+                </script>
+        </div>
+    </nav>
+
+    <div class="container">
+    <h1 class="page-title">Report Lost Item</h1>
+
+    <form id="foundItemForm">
+        <div class="form-group">
+            <label class="form-label">Item Name</label>
+            <input type="text" class="form-input" placeholder="Name of the item" required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Item Description</label>
+            <textarea class="form-textarea" placeholder="Description of the item you lost" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Date & Time Lost</label>
+            <div class="datetime-group">
+                <input type="text" class="datetime-input" placeholder="DD/MM/YYYY" required>
+                <input type="text" class="datetime-input" placeholder="HH:MM AM/PM" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Location Lost</label>
+            <input type="text" class="form-input" placeholder="Where did you lost the item?" required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Upload Photos</label>
+            <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+                <div class="upload-icon">⬆️</div>
+                <div class="upload-title">Upload Photos</div>
+                <div class="upload-subtitle">Add photo of the lost item to help identify it.</div>
+            </div>
+            <input type="file" id="fileInput" class="file-input" accept="image/*" multiple>
+        </div>
+
+        <div class="form-actions">
+            <button type="button" class="btn btn-cancel" onclick="CancelBTN();">Cancel</button>
+                <script>
+                    function CancelBTN() {
+                        window.location.href= "Lost_Item_Signed_In.html"; // Redirect to Lost Item Signed In page
+                    } 
+                </script>
+            <button type="submit" class="btn btn-submit" onclick="SubmitBTN(); return false;">Submit</button>
+
+                <script>
+                    function SubmitBTN() {
+                        alert('Lost item reported successfully!'); 
+                        window.location.href= "Lost_Item_Signed_In.html"; // Redirect to Lost Item Signed In page
+                    } 
+                </script>
+        </div>
+    </form>
+</div>
+ 
+</body>
+</html>
