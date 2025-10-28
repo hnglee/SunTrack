@@ -1,0 +1,601 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f1eb 0%, #ede4d3 100%);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: F9CB99;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.493);
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-image {
+            width: 80px;
+            height: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 850px) {
+        .nav-links {
+            display: none;  /* hide links */
+            flex-direction: column;
+            background: linear-gradient(135deg, #f5f1eb 0%, #ede4d3 100%);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.493);
+            position: absolute;
+            top: 50px;
+            right: 30px;
+            width: 200px;
+            padding: 10px;
+            border-radius: 8px;
+            z-index: 1000; /* ensure it appears above other content */
+        }
+
+        .nav-links.active {
+            display: flex; /* show menu when active */
+        }
+
+        .hamburger {
+            display: block; /* show hamburger */
+        }
+    }
+       .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            color: #3498db;
+        }
+
+        .lost-item-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .found-item-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .notification-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .message-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .about-us-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .faq-icon {
+            width: 25px;
+            height: auto;
+        }
+
+        .profile-icon {
+            width: 15px;
+            height: auto;
+        }
+
+        .sign-in-btn {
+            background: #95a5a6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .sign-in-btn:hover {
+            background: #7f8c8d;
+            transform: translateY(-1px);
+        }
+
+        .profile-btn {
+            padding: 10px 10px;
+            border: 3px solid #555454;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .profile-btn:hover {
+            background: #080808;
+            transform: translateY(-1px);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #bdc3c7;
+            position: relative;
+        }
+
+        .lost-item-icon {
+            width: 32px;
+            height: auto;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .add-button {
+            position: absolute;
+            top: -5px;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .add-button:hover {
+            transform: scale(1.1);
+        }
+
+        .upload-icon {
+            width: 45px;
+            height: auto;
+        }
+
+        .search-container {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 15px 50px 15px 50px;
+            border: 2px solid #bdc3c7;
+            border-radius: 25px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.95);
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-bar:focus {
+            border-color: #3498db;
+        }
+
+        .search-bar::placeholder {
+            color: #95a5a6;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: auto;
+        }
+
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .item-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .item-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .item-image-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .lost-item {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .view_more {
+            position: absolute;
+            top: 10px;
+            right: 3px;
+            width: 15%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .zoom-icon:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .item-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .item-description {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .item-details {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .item-detail {
+            display: flex;
+            font-size: 14px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #2c3e50;
+            min-width: 100px;
+        }
+
+        .detail-value {
+            color: #7f8c8d;
+        }
+
+        .popout-icon {
+            width: 15px;
+            height: auto;
+        }
+
+        .lostmodal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .lostmodal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lostmodal-content {
+            background: linear-gradient(135deg, #f5f1eb 0%, #ede4d3 100%);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .lostmodal-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #bdc3c7;
+        }
+
+        .lostmodal-breadcrumb {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .lostmodal-image {
+            width: 100%;
+            max-height: auto;
+            object-fit: cover;
+            background: #fff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .lostmodal-section {
+            margin-bottom: 25px;
+        }
+
+        .lostmodal-section h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .lostmodal-section p {
+            color: #2c3e50;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .lostmodal-details-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            border-top: 2px solid #bdc3c7;
+            padding-top: 15px;
+        }
+
+        .lostmodal-detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .lostmodal-detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .lostmodal-detail-label {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+
+        .lostmodal-detail-value {
+            color: #2c3e50;
+            font-size: 16px;
+        }
+
+        .lostmodal-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .lostmodal-btn {
+            flex: 1;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lostmodal-btn-primary {
+            background: #000;
+            color: white;
+        }
+
+        .lostmodal-btn-primary:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .lostmodal-btn-secondary {
+            background: white;
+            color: #2c3e50;
+            border: 2px solid #2c3e50;
+        }
+
+        .lostmodal-btn-secondary:hover {
+            background: #f5f1eb;
+            transform: translateY(-2px);
+        }
+
+        .lostmessage-modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .lostmessage-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lostmessage-modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.3s ease;
+        }
+
+        .lostmessage-modal-header {
+            margin-bottom: 20px;
+        }
+
+        .lostmessage-modal-header h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .lostmessage-modal-header p {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .lostmessage-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .lostmessage-form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .lostmessage-form-group label {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 14px;
+        }
+
+        .lostmessage-form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #bdc3c7;
+            border-radius: 10px;
+            font-size: 14px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            resize: vertical;
+            min-height: 120px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .lostmessage-form-group textarea:focus {
+            border-color: #3498db;
+        }
+
+        .lostmessage-form-group textarea::placeholder {
+            color: #95a5a6;
+        }
+
+        .lostmessage-modal-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .lostmessage-modal-btn {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lostmessage-modal-btn-send {
+            background: #000;
+            color: white;
+        }
+
+        .lostmessage-modal-btn-send:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .lostmessage-modal-btn-cancel {
+            background: white;
+            color: #2c3e50;
+            border: 2px solid #2c3e50;
+        }
+
+        .lostmessage-modal-btn-cancel:hover {
+            background: #f5f1eb;
+            transform: translateY(-2px);
+        }
