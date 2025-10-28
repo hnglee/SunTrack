@@ -7,14 +7,14 @@
     </head>
 <body>
     <nav class="navbar">
-        <div class="logo" onclick="BacktoHomepage()"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\SunTrack_Logo.png" class="logo-image" alt="rectangle" /></div>
+        <div class="logo" onclick="BacktoHomepage()"><img src="Images/SunTrack_Logo.png" class="logo-image" alt="rectangle" /></div>
             <script>
                 function BacktoHomepage() {
                     window.location.href= "index.html"; // Redirect to Homepage page after successful sign up 
                 } 
             </script>
 
-        <div class="hamburger" onclick="toggleMenu()"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Hamburger Icon.png" class="lost-item-icon" alt="rectangle" /></div>
+        <div class="hamburger" onclick="toggleMenu()"><img src="Images/Hamburger Icon.png" class="lost-item-icon" alt="rectangle" /></div>
             <script>
                 function toggleMenu() {
                     document.getElementById("nav-links").classList.toggle("active");
@@ -23,15 +23,15 @@
             
         <div class="nav-links" id="nav-links">
             <a href="Lost_Items_Haven't_Sign_In.html" class="nav-item">
-                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Lost Item Icon.png" class="lost-item-icon" alt="rectangle" /> <!-- Lost Item Icon -->
+                <img src="Images/Lost Item Icon.png" class="lost-item-icon" alt="rectangle" /> <!-- Lost Item Icon -->
                 <span class="nav-text">Lost Items</span> <!-- Lost Items Link -->
             </a>
             <a href="Found_Item_Haven't_Sign_In.html" class="nav-item">
-                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Found Item Icon.png" class="found-item-icon" alt="rectangle" /> <!-- Found Item Icon -->
+                <img src="Images/Found Item Icon.png" class="found-item-icon" alt="rectangle" /> <!-- Found Item Icon -->
                 <span class="nav-text">Found Items</span> <!-- Found Items Link -->
             </a>
             <a href="#" class="nav-item">
-                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Notificaiton Icon.png" class="notification-icon" alt="rectangle" /> <!-- Notification Icon -->
+                <img src="Images/Notificaiton Icon.png" class="notification-icon" alt="rectangle" /> <!-- Notification Icon -->
                 <span class="nav-text" onclick="Error_Message();">Notification</span> <!-- Notification Link -->
                 <script>
                     function Error_Message() {
@@ -40,21 +40,21 @@
                 </script>
             </a>
             <a href="#" class="nav-item">
-                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Message Icon.png" class="message-icon" alt="rectangle" /> <!-- Message Icon -->
+                <img src="Images/Message Icon.png" class="message-icon" alt="rectangle" /> <!-- Message Icon -->
                 <span class="nav-text" onclick="Message();">Messages</span> <!-- Messages Link -->
                 <script>
                     function Message() {
                         alert('Please sign in to access Messages.');
-                }
+                    }
                 </script>
             </a>
             
             <a href="About_Us_Haven't_Sign_In.html" class="nav-item">
-                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\About Us Icon.png" class="about-us-icon" alt="rectangle" /> <!-- About Us Icon -->
+                <img src="Images/About Us Icon.png" class="about-us-icon" alt="rectangle" /> <!-- About Us Icon -->
                 <span class="nav-text">About Us</span> <!-- About Us Link -->
             </a>
             <a href="FAQ_Haven't_Sign_In.html" class="nav-item">
-                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\FAQ Icon.png" class="faq-icon" alt="rectangle" /> <!-- FAQ Icon -->
+                <img src="Images/FAQ Icon.png" class="faq-icon" alt="rectangle" /> <!-- FAQ Icon -->
                 <span class="nav-text">FAQ</span> <!-- FAQ Link -->
             </a>
             <button type="button" class="sign-in-btn" onclick="SignIn();">Sign In</button> <!-- Sign In Button -->
@@ -69,9 +69,9 @@
         <div class="container">
             <section class="section">
                 <div class="section-header">
-                    <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Found Item Icon.png" class="found-item-icon" alt="rectangle" /> <!-- Recently Lost Item Icon -->
+                    <img src="Images/Found Item Icon.png" class="found-item-icon" alt="rectangle" /> <!-- Recently Lost Item Icon -->
                     <h2 class="section-title">Found Items</h2> <!-- Recently Lost Section Title -->
-                    <button class="add-button"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Upload Icon.png" class="upload-icon" alt="rectangle" onclick="Error_Message2();"/> </button>
+                    <button class="add-button"><img src="Images/Upload Icon.png" class="upload-icon" alt="rectangle" onclick="Error_Message2();"/> </button>
                     <script>
                         function Error_Message2() {
                             alert('Please sign in to upload found items.');
@@ -80,25 +80,25 @@
                 </div>
 
                 <div class="search-container">
-                    <div class="search-icon"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Search Icon.png" class="search-icon" alt="rectangle"></div>
+                    <div class="search-icon"><img src="Images/Search Icon.png" class="search-icon" alt="rectangle"></div>
                     <input type="text" class="search-bar" placeholder="Search for found items">
                 </div>
 
         <div class="items-grid">
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Found\1. Backpack.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
-                        <a href="#" onclick="alert('Please sign in to view item detials')"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Found/1. Backpack.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
+                        <a href="#" onclick="alert('Please sign in to view item details')"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <div class="item-title">Backpack</div>
                     <div class="item-description">A black Robinmay backpack.</div>
                     <div class="item-details">
                         <div class="item-detail">
-                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-label">Date Found:</span>
                             <span class="detail-value">08 August 2025</span>
                         </div>
                         <div class="item-detail">
-                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-label">Location Found:</span>
                             <span class="detail-value">Sunway Library</span>
                         </div>
                     </div>
@@ -106,18 +106,18 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Found\2. Waterbottle.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
-                        <a href="#" onclick="alert('Please sign in to view item detials')"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Found/2. Waterbottle.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
+                        <a href="#" onclick="alert('Please sign in to view item details')"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <div class="item-title">Waterbottle</div>
                     <div class="item-description">A white Ezalo water bottle.</div>
                     <div class="item-details">
                         <div class="item-detail">
-                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-label">Date Found:</span>
                             <span class="detail-value">02 August 2025</span>
                         </div>
                         <div class="item-detail">
-                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-label">Location Found:</span>
                             <span class="detail-value">JC 1 Hall</span>
                         </div>
                     </div>
@@ -125,18 +125,18 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Found\3. Power Adapter.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
-                        <a href="#" onclick="alert('Please sign in to view item detials')"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Found/3. Power Adapter.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
+                        <a href="#" onclick="alert('Please sign in to view item details')"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <div class="item-title">Power Adapter</div>
                     <div class="item-description">An Apple usb-c power adapter.</div>
                     <div class="item-details">
                         <div class="item-detail">
-                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-label">Date Found:</span>
                             <span class="detail-value">25 July 2025</span>
                         </div>
                         <div class="item-detail">
-                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-label">Location Found:</span>
                             <span class="detail-value">JC 2 Hall</span>
                         </div>
                     </div>
@@ -144,18 +144,18 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Found\4. Mouse.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
-                        <a href="#" onclick="alert('Please sign in to view item detials')"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Found/4. Mouse.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
+                        <a href="#" onclick="alert('Please sign in to view item details')"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <div class="item-title">Mouse</div>
                     <div class="item-description">A black Razer mouse.</div>
                     <div class="item-details">
                         <div class="item-detail">
-                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-label">Date Found:</span>
                             <span class="detail-value">15 July 2025</span>
                         </div>
                         <div class="item-detail">
-                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-label">Location Found:</span>
                             <span class="detail-value">JC 3 Hall</span>
                         </div>
                     </div>
@@ -163,18 +163,18 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Found\5. Calculator.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
-                        <a href="#" onclick="alert('Please sign in to view item detials')"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Found/5. Calculator.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
+                        <a href="#" onclick="alert('Please sign in to view item details')"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <div class="item-title">Calculator</div>
                     <div class="item-description">A Casio calculator.</div>
                     <div class="item-details">
                         <div class="item-detail">
-                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-label">Date Found:</span>
                             <span class="detail-value">05 July 2025</span>
                         </div>
                         <div class="item-detail">
-                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-label">Location Found:</span>
                             <span class="detail-value">Sunway Library</span>
                         </div>
                     </div>
@@ -182,18 +182,18 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Found\6. Labubu.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
-                        <a href="#" onclick="alert('Please sign in to view item detials')"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Found/6. Labubu.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
+                        <a href="#" onclick="alert('Please sign in to view item details')"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <div class="item-title">Labubu</div>
                     <div class="item-description">A second series labubu.</div>
                     <div class="item-details">
                         <div class="item-detail">
-                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-label">Date Found:</span>
                             <span class="detail-value">02 July 2025</span>
                         </div>
                         <div class="item-detail">
-                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-label">Location Found:</span>
                             <span class="detail-value">Uni LT 1</span>
                         </div>
                     </div>
@@ -201,18 +201,18 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Found\7. Car Key.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
-                        <a href="#" onclick="alert('Please sign in to view item detials')"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Found/7. Car Key.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
+                        <a href="#" onclick="alert('Please sign in to view item details')"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <div class="item-title">Car Key</div>
                     <div class="item-description">A Peugeot car key with a black case. </div>
                     <div class="item-details">
                         <div class="item-detail">
-                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-label">Date Found:</span>
                             <span class="detail-value">29 June 2025</span>
                         </div>
                         <div class="item-detail">
-                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-label">Location Found:</span>
                             <span class="detail-value">SW-CL1-7</span>
                         </div>
                     </div>
@@ -220,18 +220,18 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Found\8. Rubik's Cube.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
-                        <a href="#" onclick="alert('Please sign in to view item detials')"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Found/8. Rubik's Cube.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
+                        <a href="#" onclick="alert('Please sign in to view item details')"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <div class="item-title">Rubik's Cube</div>
                     <div class="item-description">Rubik's Cube</div>
                     <div class="item-details">
                         <div class="item-detail">
-                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-label">Date Found:</span>
                             <span class="detail-value">23 June 2025</span>
                         </div>
                         <div class="item-detail">
-                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-label">Location Found:</span>
                             <span class="detail-value">UW-2-7</span>
                         </div>
                     </div>
@@ -239,18 +239,18 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Found\9. Pencil Case.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
-                        <a href="#" onclick="alert('Please sign in to view item detials')"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Found/9. Pencil Case.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
+                        <a href="#" onclick="alert('Please sign in to view item details')"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <div class="item-title">Pencil Case</div>
                     <div class="item-description">A black pencil case.</div>
                     <div class="item-details">
                         <div class="item-detail">
-                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-label">Date Found:</span>
                             <span class="detail-value">08 June 2025</span>
                         </div>
                         <div class="item-detail">
-                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-label">Location Found:</span>
                             <span class="detail-value">UE-2-16</span>
                         </div>
                     </div>
@@ -258,18 +258,18 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Found\10. Charge Cable.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
-                        <a href="#" onclick="alert('Please sign in to view item detials')"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Found/10. Charge Cable.jpeg" class="found-item" alt="rectangle" /> <!-- Found Item Image -->
+                        <a href="#" onclick="alert('Please sign in to view item details')"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <div class="item-title">Charge Cable</div>
-                    <div class="item-description">An Apple usb-c to lightning cable.</div>
+                    <div class="item-description">An Apple USB-C to Lightning cable.</div>
                     <div class="item-details">
                         <div class="item-detail">
-                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-label">Date Found:</span>
                             <span class="detail-value">02 June 2025</span>
                         </div>
                         <div class="item-detail">
-                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-label">Location Found:</span>
                             <span class="detail-value">NE-3-7</span>
                         </div>
                     </div>
@@ -277,4 +277,5 @@
         </section>
     </div>
 </body>
+
 </html>
