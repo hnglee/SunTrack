@@ -7,14 +7,14 @@
     </head>
 <body>
     <nav class="navbar">
-        <div class="logo" onclick="BacktoHomepage()"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\SunTrack_Logo.png" class="logo-image" alt="rectangle" /></div>
+        <div class="logo" onclick="BacktoHomepage()"><img src="Images/SunTrack_Logo.png" class="logo-image" alt="rectangle" /></div>
             <script>
                 function BacktoHomepage() {
                     window.location.href= "Homepage_Signed_In.html"; // Redirect to Homepage page after successful sign up 
                 } 
             </script>
 
-        <div class="hamburger" onclick="toggleMenu()"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Hamburger Icon.png" class="lost-item-icon" alt="rectangle" /></div>
+        <div class="hamburger" onclick="toggleMenu()"><img src="Images/Hamburger Icon.png" class="lost-item-icon" alt="rectangle" /></div>
             <script>
                 function toggleMenu() {
                     document.getElementById("nav-links").classList.toggle("active");
@@ -23,31 +23,36 @@
             
         <div class="nav-links" id="nav-links">
             <a href="Lost_Item_Signed_In.html" class="nav-item">
-                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Lost Item Icon.png" class="lost-item-icon" alt="rectangle" /> <!-- Lost Item Icon -->
+                <img src="Images/Lost Item Icon.png" class="lost-item-icon" alt="rectangle" /> <!-- Lost Item Icon -->
                 <span class="nav-text">Lost Items</span> <!-- Lost Items Link -->
             </a>
+
             <a href="Found_Item_Signed_In.html" class="nav-item">
-                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Found Item Icon.png" class="found-item-icon" alt="rectangle" /> <!-- Found Item Icon -->
+                <img src="Images/Found Item Icon.png" class="found-item-icon" alt="rectangle" /> <!-- Found Item Icon -->
                 <span class="nav-text">Found Items</span> <!-- Found Items Link -->
             </a>
+
             <a href="Notification.html" class="nav-item">
-                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Notificaiton Icon.png" class="notification-icon" alt="rectangle" /> <!-- Notification Icon -->
+                <img src="Images/Notificaiton Icon.png" class="notification-icon" alt="rectangle" /> <!-- Notification Icon -->
                 <span class="nav-text">Notification</span> <!-- Notification Link -->
             </a>
+
             <a href="Message.html" class="nav-item">
-                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Message Icon.png" class="message-icon" alt="rectangle" /> <!-- Message Icon -->
+                <img src="Images/Message Icon.png" class="message-icon" alt="rectangle" /> <!-- Message Icon -->
                 <span class="nav-text">Messages</span> <!-- Messages Link -->
             </a>
             
             <a href="About_Us_Signed_In.html" class="nav-item">
-                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\About Us Icon.png" class="about-us-icon" alt="rectangle" /> <!-- About Us Icon -->
+                <img src="Images/About Us Icon.png" class="about-us-icon" alt="rectangle" /> <!-- About Us Icon -->
                 <span class="nav-text">About Us</span> <!-- About Us Link -->
             </a>
+
             <a href="FAQ_Signed_In.html" class="nav-item">
-                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\FAQ Icon.png" class="faq-icon" alt="rectangle" /> <!-- FAQ Icon -->
+                <img src="Images/FAQ Icon.png" class="faq-icon" alt="rectangle" /> <!-- FAQ Icon -->
                 <span class="nav-text">FAQ</span> <!-- FAQ Link -->
             </a>
-            <button type="button" class="profile-btn" onclick="Profile();"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Username Icon.png" class="profile-icon" alt="rectangle"></button> <!-- Sign In Button -->
+            
+            <button type="button" class="profile-btn" onclick="Profile();"><img src="Images/Username Icon.png" class="profile-icon" alt="rectangle"></button> <!-- Sign In Button -->
                 <script>
                     function Profile() {
                         window.location.href= "User_Profile.html"; // Redirect to Sign In page after successful sign up 
@@ -59,9 +64,9 @@
         <div class="container">
             <section class="section">
                 <div class="section-header">
-                    <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Lost Item Icon.png" class="lost-item-icon" alt="rectangle" /> <!-- Recently Lost Item Icon -->
+                    <img src="Images/Lost Item Icon.png" class="lost-item-icon" alt="rectangle" /> <!-- Recently Lost Item Icon -->
                     <h2 class="section-title">Lost Items</h2> <!-- Recently Lost Section Title -->
-                    <button class="add-button"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Upload Icon.png" class="upload-icon" alt="rectangle" onclick="Upload();"/> </button>
+                    <button class="add-button"><img src="Images/Upload Icon.png" class="upload-icon" alt="rectangle" onclick="Upload();"/> </button>
                     <script>
                         function Upload() {
                            window.location.href= "Report_Lost_Item.html"; // Redirect to Report Lost Item page
@@ -70,15 +75,15 @@
                 </div>
 
                 <div class="search-container">
-                    <div class="search-icon"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Search Icon.png" class="search-icon" alt="rectangle"></div>
+                    <div class="search-icon"><img src="Images/Search Icon.png" class="search-icon" alt="rectangle"></div>
                     <input type="text" class="search-bar" placeholder="Search for lost items">
                 </div>
 
         <div class="items-grid">
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\1. Powerbank.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
-                        <a href="#" onclick="openLostModal('Pineng Power bank', 'A black power bank with 22.5 W.', '08 August 2025', 'Sunway Library', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\1. Powerbank.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Lost/1. Powerbank.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Pineng Power bank', 'A black power bank with 22.5 W.', '08 August 2025', 'Sunway Library', 'Images//Items//Lost//1. Powerbank.jpeg'); return false;"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <!-- Item Details -->
                     <div class="item-title">Pineng Power bank</div>
@@ -97,8 +102,8 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\2. Coach Card Case.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
-                        <a href="#" onclick="openLostModal('Coach Card Case', 'A black card case.', '02 August 2025', 'JC 1 Hall', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\2. Coach Card Case.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Lost/2. Coach Card Case.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Coach Card Case', 'A black card case.', '02 August 2025', 'JC 1 Hall', 'Images//Items//Lost//2. Coach Card Case.jpeg'); return false;"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <!-- Item Details -->
                     <div class="item-title">Coach Card Case</div>
@@ -117,8 +122,8 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\3. JisuLife Fan.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
-                        <a href="#" onclick="openLostModal('JisuLife Fan', 'A blue fan with 3600mAh.', '25 July 2025', 'JC 2 Hall', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\3. JisuLife Fan.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Lost/3. JisuLife Fan.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('JisuLife Fan', 'A blue fan with 3600mAh.', '25 July 2025', 'JC 2 Hall', 'Images//Items//Lost//3. JisuLife Fan.jpeg'); return false;"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                         </script>
                     </div>
                     <!-- Item Details -->
@@ -138,8 +143,8 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\4. Apple Watch.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
-                        <a href="#" onclick="openLostModal('Apple Watch', 'A black series 10 apple watch.', '15 July 2025', 'JC 3 Hall', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\4. Apple Watch.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Lost/4. Apple Watch.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Apple Watch', 'A black series 10 apple watch.', '15 July 2025', 'JC 3 Hall', 'Images//Items//Lost//4. Apple Watch.jpeg'); return false;"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <!-- Item Details -->
                     <div class="item-title">Apple Watch</div>
@@ -158,8 +163,8 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\5. Airpods.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
-                        <a href="#" onclick="openLostModal('Airpods', 'Airpods 4', '05 July 2025', 'Sunway Library', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\5. Airpods.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Lost/5. Airpods.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Airpods', 'Airpods 4', '05 July 2025', 'Sunway Library', 'Images//Items//Lost//5. Airpods.jpeg'); return false;"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <!-- Item Details -->
                     <div class="item-title">Airpods</div>
@@ -178,8 +183,8 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\6. Keys.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
-                        <a href="#" onclick="openLostModal('Keys', 'A key with blue case', '02 July 2025', 'Uni LT 1', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\6. Keys.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Lost/6. Keys.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Keys', 'A key with blue case', '02 July 2025', 'Uni LT 1', 'Images//Items//Lost//6. Keys.jpeg'); return false;"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <!-- Item Details -->
                     <div class="item-title">Keys</div>
@@ -198,8 +203,8 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\7. Blind Box Item.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
-                        <a href="#" onclick="openLostModal('Blind Box Item', 'A sanrio Hangyodon blind box item.', '29 June 2025', 'SW-CL1-7', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\7. Blind Box Item.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Lost/7. Blind Box Item.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Blind Box Item', 'A sanrio Hangyodon blind box item.', '29 June 2025', 'SW-CL1-7', 'Images//Items//Lost//7. Blind Box Item.jpeg'); return false;"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <!-- Item Details -->
                     <div class="item-title">Blind Box Item</div>
@@ -218,8 +223,8 @@
 
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\8. Hanging Ornament.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
-                        <a href="#" onclick="openLostModal('Hanging Ornament', 'A sky lantern hanging ornaments.', '23 June 2025', 'UW-2-7', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\8. Hanging Ornament.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Lost/8. Hanging Ornament.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Hanging Ornament', 'A sky lantern hanging ornaments.', '23 June 2025', 'UW-2-7', 'Images//Items//Lost//8. Hanging Ornament.jpeg'); return false;"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <!-- Item Details -->
                     <div class="item-title">Hanging Ornament</div>
@@ -238,8 +243,8 @@
         
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\9. Glassess.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
-                        <a href="#" onclick="openLostModal('Glasses', 'A black glasses.', '08 June 2025', 'UE-2-16', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\9. Glassess.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Lost/9. Glassess.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Glasses', 'A black glasses.', '08 June 2025', 'UE-2-16', 'Images//Items//Lost//9. Glassess.jpeg'); return false;"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <!-- Item Details -->
                     <div class="item-title">Glasses</div>
@@ -258,8 +263,8 @@
         
                 <div class="item-card">
                     <div class="item-image-container">
-                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\10. Pendrive.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
-                        <a href="#" onclick="openLostModal('Pendrive', 'A black usb pendrive 32GB.', '02 June 2025', 'NE-3-7', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\10. Pendrive.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        <img src="Images/Items/Lost/10. Pendrive.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Pendrive', 'A black usb pendrive 32GB.', '02 June 2025', 'NE-3-7', 'Images//Items//Lost//10. Pendrive.jpeg'); return false;"><img src="Images/View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
                     </div>
                     <!-- Item Details -->
                     <div class="item-title">Pendrive</div>
@@ -282,7 +287,7 @@
     <div id="itemlostModal" class="lostmodal">
         <div class="lostmodal-content">
             <div class="lostmodal-header">
-                <span class="lostmodal-breadcrumb"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Lost Item Icon.png" class="popout-icon" alt="rectangle" /> Lost Item / <span id="modalTitlelost"></span></span>
+                <span class="lostmodal-breadcrumb"><img src="Images/Lost Item Icon.png" class="popout-icon" alt="rectangle" /> Lost Item / <span id="modalTitlelost"></span></span>
             </div>
             
             <img id="modalImagelost" class="lostmodal-image" alt="Item Image" />
@@ -386,4 +391,5 @@
         });
     </script>
 </body>
+
 </html>
