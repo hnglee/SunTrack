@@ -1,0 +1,504 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunTrack - User_Profile</title> <!-- Set Website Title -->
+    <link rel="stylesheet" href="User_Profile.css"> <!-- Link to CSS file -->
+    </head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="BacktoHomepage()"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\SunTrack_Logo.png" class="logo-image" alt="rectangle" /></div>
+            <script>
+                function BacktoHomepage() {
+                    window.location.href= "Homepage_Signed_In.html"; // Redirect to Homepage page after successful sign up 
+                } 
+            </script>
+
+        <div class="hamburger" onclick="toggleMenu()"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Hamburger Icon.png" class="lost-item-icon" alt="rectangle" /></div>
+            <script>
+                function toggleMenu() {
+                    document.getElementById("nav-links").classList.toggle("active");
+                }
+            </script>
+            
+        <div class="nav-links" id="nav-links">
+            <a href="Lost_Item_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Lost Item Icon.png" class="lost-item-icon" alt="rectangle" /> <!-- Lost Item Icon -->
+                <span class="nav-text">Lost Items</span> <!-- Lost Items Link -->
+            </a>
+
+            <a href="Found_Item_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Found Item Icon.png" class="found-item-icon" alt="rectangle" /> <!-- Found Item Icon -->
+                <span class="nav-text">Found Items</span> <!-- Found Items Link -->
+            </a>
+
+            <a href="Notification.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Notificaiton Icon.png" class="notification-icon" alt="rectangle" /> <!-- Notification Icon -->
+                <span class="nav-text">Notification</span> <!-- Notification Link -->
+            </a>
+
+            <a href="Message.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Message Icon.png" class="message-icon" alt="rectangle" /> <!-- Message Icon -->
+                <span class="nav-text">Messages</span> <!-- Messages Link -->
+            </a>
+            
+            <a href="About_Us_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\About Us Icon.png" class="about-us-icon" alt="rectangle" /> <!-- About Us Icon -->
+                <span class="nav-text">About Us</span> <!-- About Us Link -->
+            </a>
+            
+            <a href="FAQ_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\FAQ Icon.png" class="faq-icon" alt="rectangle" /> <!-- FAQ Icon -->
+                <span class="nav-text">FAQ</span> <!-- FAQ Link -->
+            </a>
+            <button type="button" class="profile-btn" onclick="Profile();"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Username Icon.png" class="profile-icon" alt="rectangle"></button> <!-- Sign In Button -->
+                <script>
+                    function Profile() {
+                        window.location.href= "User_Profile.html"; // Redirect to Sign In page after successful sign up 
+                } 
+                </script>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Username Icon.png" alt="Profile Picture">
+            </div>
+            <h1 class="profile-name">Lee Yi Hng</h1>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('basic')">
+                <h2 class="section-title">Basic Information</h2>
+                <span class="toggle-icon" id="basic-icon">▼</span>
+            </div>
+            <div class="section-content expanded" id="basic-content">
+                <div class="info-item">
+                    <span class="info-label">Username:</span>
+                    <a href="#" class="info-value" onclick="openUsernameModal(); return false;" id="current-username">Lee Yi Hng</a>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Email Address:</span>
+                    <a href="#" class="info-value" onclick="openEmailModal(); return false;" id="current-email">hng1234@gmail.com</a>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Password:</span>
+                    <a href="#" class="info-value" onclick="openPasswordModal(); return false;">Change Password</a>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Birthday:</span>
+                    <a href="#" class="info-value" onclick="openBirthdayModal(); return false;" id="current-birthday">Add Birthday</a>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Gender:</span>
+                    <a href="#" class="info-value" onclick="openGenderModal(); return false;" id="current-gender">Add Gender</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('system')">
+                <h2 class="section-title">System Information</h2>
+                <span class="toggle-icon" id="system-icon">▼</span>
+            </div>
+            <div class="section-content expanded" id="system-content">
+                <div class="info-item">
+                    <span class="info-label">Language:</span>
+                    <a href="#" class="info-value" onclick="openLanguageModal(); return false;" id="current-language">English (United States)</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="sign-out-btn" onclick="alert('Signing out...'); window.location.href='Sign_In.html';">Sign Out</button>
+    </div>
+
+    <!-- Language Modal -->
+    <div class="modal-overlay" id="languageModal" onclick="closeLanguageModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 class="modal-title">Select Language</h2>
+                <button class="close-btn" onclick="closeLanguageModal()">&times;</button>
+            </div>
+            
+            <div class="language-options">
+                <div class="language-option selected" onclick="selectLanguage(this, 'English (United States)')">
+                    <span class="language-name">English (United States)</span>
+                    <span class="check-icon">✓</span>
+                </div>
+                <div class="language-option" onclick="selectLanguage(this, '中文 (Chinese)')">
+                    <span class="language-name">中文 (Chinese)</span>
+                    <span class="check-icon">✓</span>
+                </div>
+                <div class="language-option" onclick="selectLanguage(this, 'Bahasa Melayu (Malay)')">
+                    <span class="language-name">Bahasa Melayu (Malay)</span>
+                    <span class="check-icon">✓</span>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-cancel" onclick="closeModal(null, 'languageModal')">Cancel</button>
+                <button class="modal-btn modal-btn-save" onclick="saveLanguage()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Username Modal -->
+    <div class="modal-overlay" id="usernameModal" onclick="closeModal(event, 'usernameModal')">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 class="modal-title">Change Username</h2>
+                <button class="close-btn" onclick="closeModal(null, 'usernameModal')">&times;</button>
+            </div>
+            
+            <div class="form-group-modal">
+                <label class="form-label-modal">New Username</label>
+                <input type="text" class="form-input-modal" id="newUsername" placeholder="Enter new username" value="Lee Yi Hng">
+            </div>
+
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-cancel" onclick="closeModal(null, 'usernameModal')">Cancel</button>
+                <button class="modal-btn modal-btn-save" onclick="saveUsername()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Email Modal -->
+    <div class="modal-overlay" id="emailModal" onclick="closeModal(event, 'emailModal')">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 class="modal-title">Change Email Address</h2>
+                <button class="close-btn" onclick="closeModal(null, 'emailModal')">&times;</button>
+            </div>
+            
+            <div class="form-group-modal">
+                <label class="form-label-modal">New Email Address</label>
+                <input type="email" class="form-input-modal" id="newEmail" placeholder="Enter new email address" value="hng1234@gmail.com">
+            </div>
+
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-cancel" onclick="closeModal(null, 'emailModal')">Cancel</button>
+                <button class="modal-btn modal-btn-save" onclick="saveEmail()">Save</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Password Modal -->
+    <div class="modal-overlay" id="passwordModal" onclick="closeModal(event, 'passwordModal')">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 class="modal-title">Change Password</h2>
+                <button class="close-btn" onclick="closeModal(null, 'passwordModal')">&times;</button>
+            </div>
+            
+            <div class="form-group-modal">
+                <label class="form-label-modal">Current Password</label>
+                <input type="password" class="form-input-modal" id="currentPassword" placeholder="Enter current password">
+            </div>
+
+            <div class="form-group-modal">
+                <label class="form-label-modal">New Password</label>
+                <input type="password" class="form-input-modal" id="newPassword" placeholder="Enter new password">
+            </div>
+
+            <div class="form-group-modal">
+                <label class="form-label-modal">Confirm New Password</label>
+                <input type="password" class="form-input-modal" id="confirmPassword" placeholder="Confirm new password">
+            </div>
+
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-cancel" onclick="closeModal(null, 'passwordModal')">Cancel</button>
+                <button class="modal-btn modal-btn-save" onclick="savePassword()">Save</button>
+            </div>
+        </div>
+    </div>
+
+        <!-- Birthday Modal -->
+    <div class="modal-overlay" id="birthdayModal" onclick="closeModal(event, 'birthdayModal')">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 class="modal-title" id="birthdayModalTitle">Add Birthday</h2>
+                <button class="close-btn" onclick="closeModal(null, 'birthdayModal')">&times;</button>
+            </div>
+            
+            <div class="form-group-modal">
+                <label class="form-label-modal">Birthday</label>
+                <input type="date" class="form-input-modal" id="birthdayDate">
+            </div>
+
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-cancel" onclick="closeModal(null, 'birthdayModal')">Cancel</button>
+                <button class="modal-btn modal-btn-save" onclick="saveBirthday()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gender Modal -->
+    <div class="modal-overlay" id="genderModal" onclick="closeModal(event, 'genderModal')">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 class="modal-title" id="genderModalTitle">Select Gender</h2>
+                <button class="close-btn" onclick="closeModal(null, 'genderModal')">&times;</button>
+            </div>
+            
+            <div class="language-options">
+                <div class="language-option" onclick="selectGender(this, 'Male')">
+                    <span class="language-name">Male</span>
+                    <span class="check-icon">✓</span>
+                </div>
+                <div class="language-option" onclick="selectGender(this, 'Female')">
+                    <span class="language-name">Female</span>
+                    <span class="check-icon">✓</span>
+                </div>
+                <div class="language-option" onclick="selectGender(this, 'Other')">
+                    <span class="language-name">Other</span>
+                    <span class="check-icon">✓</span>
+                </div>
+                <div class="language-option" onclick="selectGender(this, 'Prefer not to say')">
+                    <span class="language-name">Prefer not to say</span>
+                    <span class="check-icon">✓</span>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-cancel" onclick="closeModal(null, 'genderModal')">Cancel</button>
+                <button class="modal-btn modal-btn-save" onclick="saveGender()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedLanguage = 'English (United States)';
+        let selectedGender = null;
+
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId + '-content');
+            const icon = document.getElementById(sectionId + '-icon');
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                icon.classList.remove('rotated');
+            } else {
+                content.classList.add('expanded');
+                icon.classList.add('rotated');
+            }
+        }
+
+        function closeModal(event, modalId) {
+            if (event && event.target !== event.currentTarget) return;
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Reset language selection if closing language modal
+            if (modalId === 'languageModal') {
+                const options = document.querySelectorAll('.language-option');
+                options.forEach(option => {
+                    option.classList.remove('selected');
+                    if (option.querySelector('.language-name').textContent === selectedLanguage) {
+                        option.classList.add('selected');
+                    }
+                });
+            }
+            
+            // Reset gender selection if closing gender modal
+            if (modalId === 'genderModal' && selectedGender) {
+                const options = document.querySelectorAll('#genderModal .language-option');
+                options.forEach(option => {
+                    option.classList.remove('selected');
+                    if (option.querySelector('.language-name').textContent === selectedGender) {
+                        option.classList.add('selected');
+                    }
+                });
+            }
+        }
+
+        function openLanguageModal() {
+            document.getElementById('languageModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openUsernameModal() {
+            document.getElementById('usernameModal').classList.add('active');
+            document.getElementById('newUsername').value = document.getElementById('current-username').textContent;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openEmailModal() {
+            document.getElementById('emailModal').classList.add('active');
+            document.getElementById('newEmail').value = document.getElementById('current-email').textContent;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openPasswordModal() {
+            document.getElementById('passwordModal').classList.add('active');
+            document.getElementById('currentPassword').value = '';
+            document.getElementById('newPassword').value = '';
+            document.getElementById('confirmPassword').value = '';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openBirthdayModal() {
+            const currentBirthday = document.getElementById('current-birthday').textContent;
+            
+            // Update modal title based on whether birthday exists
+            if (currentBirthday !== 'Add Birthday') {
+                document.getElementById('birthdayModalTitle').textContent = 'Edit Birthday';
+                // Convert formatted date back to YYYY-MM-DD for input
+                // This is a simple conversion - in production you'd want more robust date parsing
+                const dateInput = document.getElementById('birthdayDate');
+                // Try to parse the existing date if it's already set
+                try {
+                    const existingDate = new Date(currentBirthday);
+                    if (!isNaN(existingDate.getTime())) {
+                        const year = existingDate.getFullYear();
+                        const month = String(existingDate.getMonth() + 1).padStart(2, '0');
+                        const day = String(existingDate.getDate()).padStart(2, '0');
+                        dateInput.value = `${year}-${month}-${day}`;
+                    }
+                } catch(e) {
+                    dateInput.value = '';
+                }
+            } else {
+                document.getElementById('birthdayModalTitle').textContent = 'Add Birthday';
+                document.getElementById('birthdayDate').value = '';
+            }
+            
+            document.getElementById('birthdayModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openGenderModal() {
+            const currentGender = document.getElementById('current-gender').textContent;
+            
+            // Update modal title based on whether gender exists
+            if (currentGender !== 'Add Gender') {
+                document.getElementById('genderModalTitle').textContent = 'Edit Gender';
+                selectedGender = currentGender;
+                const options = document.querySelectorAll('#genderModal .language-option');
+                options.forEach(option => {
+                    option.classList.remove('selected');
+                    if (option.querySelector('.language-name').textContent === selectedGender) {
+                        option.classList.add('selected');
+                    }
+                });
+            } else {
+                document.getElementById('genderModalTitle').textContent = 'Select Gender';
+                // Clear selection for new gender
+                const options = document.querySelectorAll('#genderModal .language-option');
+                options.forEach(option => option.classList.remove('selected'));
+            }
+            
+            document.getElementById('genderModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function selectLanguage(element, language) {
+            const options = document.querySelectorAll('.language-option');
+            options.forEach(option => option.classList.remove('selected'));
+            element.classList.add('selected');
+        }
+
+        function selectGender(element, gender) {
+            const options = document.querySelectorAll('#genderModal .language-option');
+            options.forEach(option => option.classList.remove('selected'));
+            element.classList.add('selected');
+        }
+
+        function saveLanguage() {
+            const selectedOption = document.querySelector('.language-option.selected');
+            if (selectedOption) {
+                selectedLanguage = selectedOption.querySelector('.language-name').textContent;
+                document.getElementById('current-language').textContent = selectedLanguage;
+            }
+            closeModal(null, 'languageModal');
+        }
+
+        function saveUsername() {
+            const newUsername = document.getElementById('newUsername').value.trim();
+            if (newUsername === '') {
+                alert('Username cannot be empty');
+                return;
+            }
+            document.getElementById('current-username').textContent = newUsername;
+            closeModal(null, 'usernameModal');
+            alert('Username changed successfully to: ' + newUsername);
+        }
+
+        function saveEmail() {
+            const newEmail = document.getElementById('newEmail').value.trim();
+            if (newEmail === '') {
+                alert('Email cannot be empty');
+                return;
+            }
+            if (!newEmail.includes('@')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            document.getElementById('current-email').textContent = newEmail;
+            closeModal(null, 'emailModal');
+            alert('Email changed successfully to: ' + newEmail);
+        }
+
+        function savePassword() {
+            const currentPassword = document.getElementById('currentPassword').value;
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (currentPassword === '' || newPassword === '' || confirmPassword === '') {
+                alert('All password fields are required');
+                return;
+            }
+            
+            if (newPassword !== confirmPassword) {
+                alert('New password and confirmation do not match');
+                return;
+            }
+            
+            if (newPassword.length < 6) {
+                alert('Password must be at least 6 characters long');
+                return;
+            }
+            
+            closeModal(null, 'passwordModal');
+            alert('Password changed successfully');
+        }
+
+        function saveBirthday() {
+            const birthday = document.getElementById('birthdayDate').value;
+            if (birthday === '') {
+                alert('Please select a birthday');
+                return;
+            }
+            
+            // Format the date nicely (e.g., "January 1, 2000")
+            const date = new Date(birthday);
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = date.toLocaleDateString('en-US', options);
+            
+            document.getElementById('current-birthday').textContent = formattedDate;
+            closeModal(null, 'birthdayModal');
+            alert('Birthday saved: ' + formattedDate);
+        }
+
+        function saveGender() {
+            const selectedOption = document.querySelector('#genderModal .language-option.selected');
+            if (!selectedOption) {
+                alert('Please select a gender');
+                return;
+            }
+            
+            selectedGender = selectedOption.querySelector('.language-name').textContent;
+            document.getElementById('current-gender').textContent = selectedGender;
+            closeModal(null, 'genderModal');
+            alert('Gender saved: ' + selectedGender);
+        }
+
+        // Initialize sections as expanded on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('basic-icon').classList.add('rotated');
+            document.getElementById('system-icon').classList.add('rotated');
+        });
+    </script>
+</body>
+</html>
