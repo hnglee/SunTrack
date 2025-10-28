@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunTrack - About_Us_Signed_In</title> <!-- Set Website Title -->
+    <link rel="stylesheet" href="About_Us.css"> <!-- Link to CSS file -->
+    </head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="BacktoHomepage()"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\SunTrack_Logo.png" class="logo-image" alt="rectangle" /></div>
+            <script>
+                function BacktoHomepage() {
+                    window.location.href= "Homepage_Signed_In.html"; // Redirect to Homepage page after successful sign up 
+                } 
+            </script>
+
+        <div class="hamburger" onclick="toggleMenu()"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Hamburger Icon.png" class="lost-item-icon" alt="rectangle" /></div>
+            <script>
+                function toggleMenu() {
+                    document.getElementById("nav-links").classList.toggle("active");
+                }
+            </script>
+            
+        <div class="nav-links" id="nav-links">
+            <a href="Lost_Item_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Lost Item Icon.png" class="lost-item-icon" alt="rectangle" /> <!-- Lost Item Icon -->
+                <span class="nav-text">Lost Items</span> <!-- Lost Items Link -->
+            </a>
+
+            <a href="Found_Item_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Found Item Icon.png" class="found-item-icon" alt="rectangle" /> <!-- Found Item Icon -->
+                <span class="nav-text">Found Items</span> <!-- Found Items Link -->
+            </a>
+
+            <a href="Notification.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Notificaiton Icon.png" class="notification-icon" alt="rectangle" /> <!-- Notification Icon -->
+                <span class="nav-text">Notification</span> <!-- Notification Link -->
+            </a>
+
+            <a href="Message.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Message Icon.png" class="message-icon" alt="rectangle" /> <!-- Message Icon -->
+                <span class="nav-text">Messages</span> <!-- Messages Link -->
+            </a>
+            
+            <a href="About_Us_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\About Us Icon.png" class="about-us-icon" alt="rectangle" /> <!-- About Us Icon -->
+                <span class="nav-text">About Us</span> <!-- About Us Link -->
+            </a>
+            
+            <a href="FAQ_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\FAQ Icon.png" class="faq-icon" alt="rectangle" /> <!-- FAQ Icon -->
+                <span class="nav-text">FAQ</span> <!-- FAQ Link -->
+            </a>
+            <button type="button" class="profile-btn" onclick="Profile();"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Username Icon.png" class="profile-icon" alt="rectangle"></button> <!-- Sign In Button -->
+                <script>
+                    function Profile() {
+                        window.location.href= "User_Profile.html"; // Redirect to Sign In page after successful sign up 
+                } 
+                </script>
+        </div>
+    </nav>
+
+    <main class="main-content">
+            <div class="biglogo-section">
+                <div class="biglogo">
+                    <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\SunTrack_Logo.png" class="biglogo" alt="rectangle" />
+                </div>
+            </div>
+
+             <div class="section">
+                <h2 class="section-title">About Us</h2>
+                <div class="section-content">
+                    SunTrack is Sunway University's official lost and found platform, designed to help students and staff recover misplaced items efficiently and securely. Recognizing the limitations of informal platforms, SunTrack offers a centralized, user-friendly, and mobile-responsive website where users can report, search, and reconnect with lost belongings. Our mission is to simplify the recovery process, foster a connected campus community, and provide a reliable space for lost and found services through intuitive design and seamless user interaction.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="section-content">
+                    We are here to assist you with any questions or concerns you may have. Please feel free to reach out to us through the following channels:
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Email Icon.png" class="email-icon" alt="rectangle" /></div>
+                    <div class="contact-info">
+                        <h4>Email</h4>
+                        <p>SunTrack@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Phone Icon.png" class="phone-icon" alt="rectangle" /></div>
+                    <div class="contact-info">
+                        <h4>Phone</h4>
+                        <p>012-3456789</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Location Icon.png" class="address-icon" alt="rectangle" /></div>
+                    <div class="contact-info">
+                        <h4>Address</h4>
+                        <p>123, Jalan Sunway 456, Bandar Sunway, 47500 Subang Jaya, Selangor.</p>
+                    </div>
+                </div>
+            </div>
+    </main>
+</body>
+</html>
