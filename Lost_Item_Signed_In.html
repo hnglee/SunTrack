@@ -1,0 +1,389 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunTrack - Lost_Item_Signed_In</title> <!-- Set Website Title -->
+    <link rel="stylesheet" href="Lost_Item.css"> <!-- Link to CSS file -->
+    </head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="BacktoHomepage()"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\SunTrack_Logo.png" class="logo-image" alt="rectangle" /></div>
+            <script>
+                function BacktoHomepage() {
+                    window.location.href= "Homepage_Signed_In.html"; // Redirect to Homepage page after successful sign up 
+                } 
+            </script>
+
+        <div class="hamburger" onclick="toggleMenu()"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Hamburger Icon.png" class="lost-item-icon" alt="rectangle" /></div>
+            <script>
+                function toggleMenu() {
+                    document.getElementById("nav-links").classList.toggle("active");
+                }
+            </script>
+            
+        <div class="nav-links" id="nav-links">
+            <a href="Lost_Item_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Lost Item Icon.png" class="lost-item-icon" alt="rectangle" /> <!-- Lost Item Icon -->
+                <span class="nav-text">Lost Items</span> <!-- Lost Items Link -->
+            </a>
+            <a href="Found_Item_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Found Item Icon.png" class="found-item-icon" alt="rectangle" /> <!-- Found Item Icon -->
+                <span class="nav-text">Found Items</span> <!-- Found Items Link -->
+            </a>
+            <a href="Notification.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Notificaiton Icon.png" class="notification-icon" alt="rectangle" /> <!-- Notification Icon -->
+                <span class="nav-text">Notification</span> <!-- Notification Link -->
+            </a>
+            <a href="Message.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Message Icon.png" class="message-icon" alt="rectangle" /> <!-- Message Icon -->
+                <span class="nav-text">Messages</span> <!-- Messages Link -->
+            </a>
+            
+            <a href="About_Us_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\About Us Icon.png" class="about-us-icon" alt="rectangle" /> <!-- About Us Icon -->
+                <span class="nav-text">About Us</span> <!-- About Us Link -->
+            </a>
+            <a href="FAQ_Signed_In.html" class="nav-item">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\FAQ Icon.png" class="faq-icon" alt="rectangle" /> <!-- FAQ Icon -->
+                <span class="nav-text">FAQ</span> <!-- FAQ Link -->
+            </a>
+            <button type="button" class="profile-btn" onclick="Profile();"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Username Icon.png" class="profile-icon" alt="rectangle"></button> <!-- Sign In Button -->
+                <script>
+                    function Profile() {
+                        window.location.href= "User_Profile.html"; // Redirect to Sign In page after successful sign up 
+                } 
+                </script>
+        </div>
+    </nav>
+
+        <div class="container">
+            <section class="section">
+                <div class="section-header">
+                    <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Lost Item Icon.png" class="lost-item-icon" alt="rectangle" /> <!-- Recently Lost Item Icon -->
+                    <h2 class="section-title">Lost Items</h2> <!-- Recently Lost Section Title -->
+                    <button class="add-button"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Upload Icon.png" class="upload-icon" alt="rectangle" onclick="Upload();"/> </button>
+                    <script>
+                        function Upload() {
+                           window.location.href= "Report_Lost_Item.html"; // Redirect to Report Lost Item page
+                    }
+                    </script>
+                </div>
+
+                <div class="search-container">
+                    <div class="search-icon"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Search Icon.png" class="search-icon" alt="rectangle"></div>
+                    <input type="text" class="search-bar" placeholder="Search for lost items">
+                </div>
+
+        <div class="items-grid">
+                <div class="item-card">
+                    <div class="item-image-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\1. Powerbank.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Pineng Power bank', 'A black power bank with 22.5 W.', '08 August 2025', 'Sunway Library', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\1. Powerbank.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                    </div>
+                    <!-- Item Details -->
+                    <div class="item-title">Pineng Power bank</div>
+                    <div class="item-description">A black power bank with 22.5 W.</div>
+                    <div class="item-details">
+                        <div class="item-detail">
+                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-value">08 August 2025</span>
+                        </div>
+                        <div class="item-detail">
+                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-value">Sunway Library</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-image-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\2. Coach Card Case.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Coach Card Case', 'A black card case.', '02 August 2025', 'JC 1 Hall', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\2. Coach Card Case.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                    </div>
+                    <!-- Item Details -->
+                    <div class="item-title">Coach Card Case</div>
+                    <div class="item-description">A black card case.</div>
+                    <div class="item-details">
+                        <div class="item-detail">
+                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-value">02 August 2025</span>
+                        </div>
+                        <div class="item-detail">
+                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-value">JC 1 Hall</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-image-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\3. JisuLife Fan.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('JisuLife Fan', 'A blue fan with 3600mAh.', '25 July 2025', 'JC 2 Hall', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\3. JisuLife Fan.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                        </script>
+                    </div>
+                    <!-- Item Details -->
+                    <div class="item-title">JisuLife Fan</div>
+                    <div class="item-description">A blue fan with 3600mAh.</div>
+                    <div class="item-details">
+                        <div class="item-detail">
+                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-value">25 July 2025</span>
+                        </div>
+                        <div class="item-detail">
+                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-value">JC 2 Hall</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-image-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\4. Apple Watch.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Apple Watch', 'A black series 10 apple watch.', '15 July 2025', 'JC 3 Hall', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\4. Apple Watch.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                    </div>
+                    <!-- Item Details -->
+                    <div class="item-title">Apple Watch</div>
+                    <div class="item-description">A black series 10 apple watch.</div>
+                    <div class="item-details">
+                        <div class="item-detail">
+                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-value">15 July 2025</span>
+                        </div>
+                        <div class="item-detail">
+                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-value">JC 3 Hall</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-image-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\5. Airpods.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Airpods', 'Airpods 4', '05 July 2025', 'Sunway Library', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\5. Airpods.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                    </div>
+                    <!-- Item Details -->
+                    <div class="item-title">Airpods</div>
+                    <div class="item-description">Airpods 4</div>
+                    <div class="item-details">
+                        <div class="item-detail">
+                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-value">05 July 2025</span>
+                        </div>
+                        <div class="item-detail">
+                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-value">Sunway Library</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-image-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\6. Keys.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Keys', 'A key with blue case', '02 July 2025', 'Uni LT 1', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\6. Keys.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                    </div>
+                    <!-- Item Details -->
+                    <div class="item-title">Keys</div>
+                    <div class="item-description">A key with blue case</div>
+                    <div class="item-details">
+                        <div class="item-detail">
+                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-value">02 July 2025</span>
+                        </div>
+                        <div class="item-detail">
+                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-value">Uni LT 1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-image-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\7. Blind Box Item.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Blind Box Item', 'A sanrio Hangyodon blind box item.', '29 June 2025', 'SW-CL1-7', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\7. Blind Box Item.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                    </div>
+                    <!-- Item Details -->
+                    <div class="item-title">Blind Box Item</div>
+                    <div class="item-description">A sanrio Hangyodon blind box item.</div>
+                    <div class="item-details">
+                        <div class="item-detail">
+                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-value">29 June 2025</span>
+                        </div>
+                        <div class="item-detail">
+                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-value">SW-CL1-7</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-image-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\8. Hanging Ornament.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Hanging Ornament', 'A sky lantern hanging ornaments.', '23 June 2025', 'UW-2-7', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\8. Hanging Ornament.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                    </div>
+                    <!-- Item Details -->
+                    <div class="item-title">Hanging Ornament</div>
+                    <div class="item-description">A sky lantern hanging ornaments.</div>
+                    <div class="item-details">
+                        <div class="item-detail">
+                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-value">23 June 2025</span>
+                        </div>
+                        <div class="item-detail">
+                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-value">UW-2-7</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="item-card">
+                    <div class="item-image-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\9. Glassess.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Glasses', 'A black glasses.', '08 June 2025', 'UE-2-16', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\9. Glassess.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                    </div>
+                    <!-- Item Details -->
+                    <div class="item-title">Glasses</div>
+                    <div class="item-description">A black glasses..</div>
+                    <div class="item-details">
+                        <div class="item-detail">
+                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-value">08 June 2025</span>
+                        </div>
+                        <div class="item-detail">
+                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-value">UE-2-16</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="item-card">
+                    <div class="item-image-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Items\Lost\10. Pendrive.jpeg" class="lost-item" alt="rectangle" /> <!-- Lost Item Image -->
+                        <a href="#" onclick="openLostModal('Pendrive', 'A black usb pendrive 32GB.', '02 June 2025', 'NE-3-7', 'C:\\Users\\Hnglee\\Downloads\\SunTrack-CP\\Images\\Items\\Lost\\10. Pendrive.jpeg'); return false;"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\View More Icon.png" class="view_more" alt="rectangle" /></a> <!-- View More Icon -->
+                    </div>
+                    <!-- Item Details -->
+                    <div class="item-title">Pendrive</div>
+                    <div class="item-description">A black usb pendrive 32GB..</div>
+                    <div class="item-details">
+                        <div class="item-detail">
+                            <span class="detail-label">Date Lost:</span>
+                            <span class="detail-value">02 June 2025</span>
+                        </div>
+                        <div class="item-detail">
+                            <span class="detail-label">Location Lost:</span>
+                            <span class="detail-value">NE-3-7</span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <!-- Lost Modal -->
+    <div id="itemlostModal" class="lostmodal">
+        <div class="lostmodal-content">
+            <div class="lostmodal-header">
+                <span class="lostmodal-breadcrumb"><img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Lost Item Icon.png" class="popout-icon" alt="rectangle" /> Lost Item / <span id="modalTitlelost"></span></span>
+            </div>
+            
+            <img id="modalImagelost" class="lostmodal-image" alt="Item Image" />
+            
+            <div class="lostmodal-section">
+                <h3>Description</h3>
+                <p id="modalDescriptionlost"></p>
+            </div>
+            
+            <div class="lostmodal-section">
+                <h3>Details</h3>
+                <div class="lostmodal-details-grid">
+                    <div class="lostmodal-detail-row">
+                        <span class="lostmodal-detail-label">Date Lost</span>
+                        <span class="lostmodal-detail-value" id="modalDateLost"></span>
+                    </div>
+                    <div class="lostmodal-detail-row">
+                        <span class="lostmodal-detail-label">Location Lost</span>
+                        <span class="lostmodal-detail-value" id="modalLocationLost"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lostmodal-buttons">
+                <button class="lostmodal-btn modal-btn-primary" onclick="openLostMessageModal()">Send a message</button>
+                <button class="lostmodal-btn modal-btn-secondary" onclick="closelostModal()">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Modal -->
+    <div id="messagelostModal" class="lostmessage-modal">
+        <div class="lostmessage-modal-content">
+            <div class="lostmessage-modal-header">
+                <h3>Send a Message</h3>
+                <p>Contact the owner about this lost item</p>
+            </div>
+            
+            <form class="lostmessage-form" onsubmit="sendMessageForm(event)">
+                <div class="lostmessage-form-group">
+                    <label for="lostmessageText">Your Message</label>
+                    <textarea 
+                        id="messageText" 
+                        placeholder="Type your message here..."
+                        required
+                    ></textarea>
+                </div>
+                
+                <div class="lostmessage-modal-buttons">
+                    <button type="submit" class="lostmessage-modal-btn message-modal-btn-send">Send</button>
+                    <button type="button" class="lostmessage-modal-btn message-modal-btn-cancel" onclick="closelostMessageModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openLostModal(title, description, dateLost, locationLost, imageSrc) {
+            document.getElementById('modalTitlelost').textContent = title;
+            document.getElementById('modalDescriptionlost').textContent = description;
+            document.getElementById('modalDateLost').textContent = dateLost;
+            document.getElementById('modalLocationLost').textContent = locationLost;
+            document.getElementById('modalImagelost').src = imageSrc;
+            document.getElementById('itemlostModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closelostModal() {
+            document.getElementById('itemlostModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function openLostMessageModal() {
+            document.getElementById('messagelostModal').classList.add('active');
+        }
+
+        function closelostMessageModal() {
+            document.getElementById('messagelostModal').classList.remove('active');
+            document.getElementById('messageText').value = '';
+        }
+
+        function sendMessageForm(event) {
+            event.preventDefault();
+            const message = document.getElementById('messageText').value;
+            alert('Message sent successfully!\n\nYour message: ' + message);
+            closelostMessageModal();
+            closelostModal();
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('itemlostModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closelostModal();
+            }
+        });
+
+        document.getElementById('messagelostModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closelostMessageModal();
+            }
+        });
+    </script>
+</body>
+</html>
