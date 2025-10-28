@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunTrack - Sign_Up</title> <!-- Set Website Title -->
+    <link rel="stylesheet" href="SignIn_SignUp_ForgotPassword.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="logo">
+                <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\SunTrack_Logo.png" class="logo-image" alt="rectangle" /> <!-- Logo Image -->
+            </div>
+            <div class="slogan"> <!-- Slogan -->
+                <h2>Always lost your belongings?</h2>
+                <p>In SunTrack</p>
+                <p class="highlight">NO MORE LOST ONLY FOUND</p>
+            </div>
+        </div>
+        
+        <div class="right-section">
+            <div class="header">
+                <h1>SIGN UP</h1> <!-- Sign Up Header -->
+            </div>
+            
+            <form>
+                <div class="form-group">
+                    <div class="input-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Username Icon.png" class="username-icon" alt="rectangle" /> <!-- Username Icon -->
+                        <input type="text" class="form-input" placeholder="Username"> <!-- Username Input -->
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Email Icon.png" class="email-icon" alt="rectangle" /> <!-- Email Icon -->
+                        <input type="email" class="form-input" placeholder="Email"> <!-- Email Input -->
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Password Icon.png" class="password-icon" alt="rectangle" /> <!-- Password Icon  -->
+                        <input type="password" class="form-input" placeholder="Password"> <!-- Password Input -->
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Password Icon.png" class="password-icon" alt="rectangle" /> <!-- Confirm Password Icon -->
+                        <input type="password" class="form-input" placeholder="Confirm Password"> <!-- Confirm Password Input -->
+                    </div>
+                </div>
+                
+                <button type="button" class="sign-up-btn" onclick="handleSignUp();">Sign Up</button> <!-- Sign Up Button -->
+                
+                <script>
+                    function handleSignUp() {
+                        alert('Your account was created successfully!'); 
+                        window.location.href= "Sign_In.html"; // Redirect to Sign In page after successful sign up 
+                } 
+                </script>
+
+                <div class="signin-link">
+                    Have an account? <a href="Sign_In.html">Sign In Here</a> <!-- Sign in link back to sign in page -->
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

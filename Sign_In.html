@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunTrack - Sign_In</title> <!-- Set Website Title -->
+    <link rel="stylesheet" href="SignIn_SignUp_ForgotPassword.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="logo">
+              <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\SunTrack_Logo.png" class="logo-image" alt="rectangle" /> <!-- Logo Image -->
+            </div>
+            <div class="slogan"> <!-- Slogan -->
+                <h2>Always lost your belongings?</h2>
+                <p>In SunTrack</p>
+                <h2>NO MORE LOST ONLY FOUND</h2>
+            </div>
+        </div>
+        
+        <div class="right-section">
+            <div class="header">
+                <h1>LOGIN</h1> <!-- Login Header -->
+            </div>
+            
+            <form>
+                <div class="form-group">
+                    <div class="input-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Username Icon.png" class="username-icon" alt="rectangle" /> <!-- Username Icon -->
+                        <input type="text" class="form-input" placeholder="Username"> <!-- Username Input -->
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="input-container">
+                        <img src="C:\Users\Hnglee\Downloads\SunTrack-CP\Images\Password Icon.png" class="password-icon" alt="rectangle" /> <!-- Password Icon  -->
+                        <input type="password" class="form-input" placeholder="Password"> <!-- Password Input -->
+                    </div>
+                </div>
+                
+                <div class="forgot-password">
+                    <a href="Forgot_Password.html">Forgot Password?</a> <!-- Forgot Password Link -->
+                </div>
+                
+                <button type="button" class="sign-in-btn" onclick="SignIn();">Sign In</button> <!-- Sign In Button -->
+                <script>
+                    function SignIn() {
+                        window.location.href= "Homepage_Signed_In.html"; // Redirect to Sign In page after successful sign up 
+                } 
+                </script>
+
+                <div class="signup-link">
+                    Don't have an account? <a href="Sign_Up.html">Sign Up Here</a> <!-- Sign Up Link -->
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
