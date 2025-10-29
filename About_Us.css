@@ -132,7 +132,6 @@
             transform: translateY(-1px);
         }
 
-        
         .profile-btn {
             padding: 10px 10px;
             border: 3px solid #555454;
@@ -146,42 +145,49 @@
             transform: translateY(-1px);
         }
 
-
-        .main-content {
-            padding-top: 50px;
-            padding-bottom: none;
-            max-width: 850px;
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 60px 30px;
         }
 
-        .biglogo-section {
+        .logo-section {
             text-align: center;
-            gap: 15px;
+            margin-bottom: 80px;
         }
 
-        .biglogo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 30px;
+        .main-logo {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
         }
 
-        .section {
-            margin-bottom: 3rem;
+        .main-logo-image {
+            width: 300px;
+            height: auto;
+            position: relative;
+            display: block;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
         .section-title {
-            font-size: 30px;
-            color: #333;
-            margin-bottom: 15px;
+            font-size: 36px;
             font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 30px;
         }
 
-        .section-content {
-            color: #555;
-            line-height: 1.5;
-            font-size: 20px;
+        .section-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #7f8c8d;
             text-align: justify;
         }
 
@@ -194,60 +200,68 @@
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 20px;
-            padding: 15px 15px;
-            background: rgba(14, 14, 15, 0.05);
-            border-radius: 12px;
-            transition: transform 0.3s ease;
+            gap: 15px;
+            padding: 20px 20px;
+            background: rgba(52, 152, 219, 0.05);
+            border-radius: 15px;
+            transition: all 0.3s ease;
         }
 
         .contact-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(28, 30, 39, 0.2);
+            background: rgba(52, 152, 219, 0.1);
+            transform: translateX(5px);
         }
 
         .email-icon {
-            width: 53px;
-            height: 45px;
-            border-radius: 12px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            flex-shrink: 0;
+            font-size: 24px;
+            color: white;
         }
 
         .phone-icon {
-            width: 53px;
-            height: 45px;
-            border-radius: 12px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            flex-shrink: 0;
+            font-size: 24px;
+            color: white;
         }
 
         .address-icon {
-            width: 53px;
-            height: 45px;
-            border-radius: 12px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            flex-shrink: 0;
+            font-size: 24px;
+            color: white;
         }
 
-        .contact-info h4 {
-            color: #333;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+        .contact-info {
+            flex: 1;
         }
 
-        .contact-info p {
-            color: #666;
-            font-size: 0.95rem;
+        .contact-label {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
         }
 
+        .contact-value {
+            font-size: 16px;
+            color: #3498db;
+            text-decoration: none;
+        }
 
+        .contact-value:hover {
+            text-decoration: underline;
+        }
