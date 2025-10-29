@@ -1,4 +1,4 @@
-* {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -146,6 +146,7 @@
             transform: translateY(-1px);
         }
 
+
         .main-content {
             padding-top: 50px;
             padding-bottom: none;
@@ -247,3 +248,4 @@
             color: #666;
             font-size: 0.95rem;
         }
+
